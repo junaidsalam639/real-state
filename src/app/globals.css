@@ -22,5 +22,20 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.featured-gradient{
+  background: linear-gradient(180deg, #08030A 23.08%, #492974 73.08%);
+}
+.founder-gradient{
+  background: linear-gradient(122.56deg, #492974 6.38%, #000000 54.79%);
+}
+.revolution-gradient{
+  background: linear-gradient(122.56deg, #492974 6.38%, #000000 54.79%);
+}
+.patner-gradient{
+  background: linear-gradient(280.58deg, #492974 -58.12%, #000000 92.13%);
+}
+.news-gradient{
+  background: linear-gradient(280.58deg, #492974 -58.12%, #000000 92.13%);
 }

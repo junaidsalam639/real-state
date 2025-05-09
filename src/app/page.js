@@ -25,16 +25,16 @@ export default function Home() {
         <div className="container mx-auto px-4 py-5 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-white flex items-center">
-            <span className="text-yellow-500">RX</span>100
+            <Image src="/assets/logo/logo.png" alt="Logo" width={100} height={100} />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-yellow-500 text-sm font-medium">HOME</Link>
-            <Link href="/about" className="text-white hover:text-yellow-500 text-sm font-medium">ABOUT</Link>
-            <Link href="/agent" className="text-white hover:text-yellow-500 text-sm font-medium">AGENT</Link>
-            <Link href="/builder" className="text-white hover:text-yellow-500 text-sm font-medium">BUILDER</Link>
-            <Link href="/customer" className="text-white hover:text-yellow-500 text-sm font-medium">CUSTOMER</Link>
+            <Link href="/" className="text-white hover:text-black text-sm font-normal">HOME</Link>
+            <Link href="/about" className="text-white hover:text-black text-sm font-normal">ABOUT</Link>
+            <Link href="/agent" className="text-white hover:text-black text-sm font-normal">AGENT</Link>
+            <Link href="/builder" className="text-white hover:text-black text-sm font-normal">BUILDER</Link>
+            <Link href="/customer" className="text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
             <Link href="/login" className="bg-white text-black px-4 py-1.5 rounded text-sm font-medium">LOG IN</Link>
           </nav>
 
@@ -59,28 +59,28 @@ export default function Home() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden bg-black/80 px-6 pb-4 pt-2 space-y-4 text-center">
-            <Link href="/" className="block text-white hover:text-yellow-500 text-sm font-medium">HOME</Link>
-            <Link href="/about" className="block text-white hover:text-yellow-500 text-sm font-medium">ABOUT</Link>
-            <Link href="/agent" className="block text-white hover:text-yellow-500 text-sm font-medium">AGENT</Link>
-            <Link href="/builder" className="block text-white hover:text-yellow-500 text-sm font-medium">BUILDER</Link>
-            <Link href="/customer" className="block text-white hover:text-yellow-500 text-sm font-medium">CUSTOMER</Link>
+            <Link href="/" className="block text-white hover:text-black text-sm font-normal">HOME</Link>
+            <Link href="/about" className="block text-white hover:text-black text-sm font-normal">ABOUT</Link>
+            <Link href="/agent" className="block text-white hover:text-black text-sm font-normal">AGENT</Link>
+            <Link href="/builder" className="block text-white hover:text-black text-sm font-normal">BUILDER</Link>
+            <Link href="/customer" className="block text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
             <Link href="/login" className="inline-block bg-white text-black px-4 py-1.5 rounded text-sm font-medium">LOG IN</Link>
           </div>
         )}
       </header>
 
 
-      <div className="flex flex-col min-h-screen bg-[#0d0a1a] text-white">
+      <div className="flex flex-col min-h-screen  text-white">
 
         <main className="flex-grow">
           {/* Hero Section */}
           <section className="relative h-[500px] md:h-[600px]">
             <div className="absolute inset-0">
               <Image
-                src="/assets/images/bgimage.webp"
+                src="/assets/images/bgimage.jpg"
                 alt="Luxury Home Interior"
                 fill
-                className="object-cover brightness-50"
+                className="object-cover"
                 priority
               />
             </div>
@@ -95,49 +95,32 @@ export default function Home() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
                   Digital Platform For Builders, Agents & Customers.
                 </h1>
-                <p className="text-lg mb-8 text-gray-200 max-w-xl">
+                <p className="text-lg mb-8 text-white max-w-xl font-normal">
                   We provide a complete service for the sale, purchase or rental of real estate. Get access to exclusive
                   network & properties that suit your needs.
                 </p>
 
-                <div className="flex flex-wrap gap-12 mt-12">
-                  <div className="text-center">
-                    <h2 className="text-4xl font-bold text-white">
-                      300<span className="text-yellow-500">+</span>
-                    </h2>
-                    <p className="text-sm mt-1 text-gray-300">
-                      HAPPY
-                      <br />
-                      CUSTOMERS
-                    </p>
+                <div className="flex flex-wrap gap-12 mt-12 text-white">
+                  <div className="text-center pr-12 border-r-2 border-white">
+                    <h2 className="text-4xl md:text-5xl font-bold">300<span>+</span></h2>
+                    <p className="text-lg font-bold mt-1">HAPPY<br />CUSTOMERS</p>
+                  </div>
+                  <div className="text-center pr-12 border-r-2 border-white">
+                    <h2 className="text-4xl md:text-5xl font-bold">900<span>+</span></h2>
+                    <p className="text-lg font-bold mt-1">RERA<br />PROJECTS</p>
                   </div>
                   <div className="text-center">
-                    <h2 className="text-4xl font-bold text-white">
-                      900<span className="text-yellow-500">+</span>
-                    </h2>
-                    <p className="text-sm mt-1 text-gray-300">
-                      RERA
-                      <br />
-                      PROJECTS
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <h2 className="text-4xl font-bold text-white">
-                      200<span className="text-yellow-500">+</span>
-                    </h2>
-                    <p className="text-sm mt-1 text-gray-300">
-                      AGENTS
-                      <br />
-                      NETWORK
-                    </p>
+                    <h2 className="text-4xl md:text-5xl font-bold">200<span>+</span></h2>
+                    <p className="text-lg font-bold mt-1">AGENTS<br />NETWORK</p>
                   </div>
                 </div>
+
               </motion.div>
             </div>
           </section>
 
           {/* Featured Projects */}
-          <section className="py-16 bg-gradient-to-b from-[#1a1333] to-[#0d0a1a]">
+          <section className="py-16 featured-gradient">
             <div className="container mx-auto px-4">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -184,7 +167,7 @@ export default function Home() {
           </section>
 
           {/* Founder Section */}
-          <section className="py-12 bg-gradient-to-r from-[#1a1333] to-[#0d0a1a]">
+          <section className="py-12 founder-gradient">
             <div className="container mx-auto px-4">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-full md:w-96">
@@ -247,7 +230,7 @@ export default function Home() {
           </section>
 
           {/* AI Revolution Section */}
-          <section className="py-16 bg-gradient-to-b from-[#1a1333] to-[#0d0a1a]">
+          <section className="py-16 revolution-gradient">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <motion.div
@@ -299,33 +282,18 @@ export default function Home() {
           </section>
 
           {/* Developer Banner */}
-          <section className="py-8 bg-gradient-to-r from-yellow-500 to-yellow-400">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="flex items-center mb-4 md:mb-0">
-                  <h3 className="text-3xl font-bold text-black mr-4">EON7 DEVELOPERS</h3>
-                  <div className="text-black">
-                    <p>Emaar Sector 62, Gurgaon</p>
-                    <p className="font-bold">₹3 Cr onwards</p>
-                    <p>Luxury Independent Floors</p>
-                  </div>
-                </div>
-                <div className="bg-black text-white px-4 py-2 rounded flex items-center">
-                  <span className="mr-2">iPhone 16 Free</span>
-                  {/* <Image
-                    src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80"
-                    alt="iPhone"
-                    width={50}
-                    height={50}
-                    className="rounded"
-                  /> */}
-                </div>
-              </div>
-            </div>
+          <section>
+            <Image
+              src="/assets/images/banner.png"
+              alt="iPhone"
+              width={800}
+              height={200}
+              className="w-full"
+            />
           </section>
 
           {/* Partners Section */}
-          <section className="py-16 bg-gradient-to-b from-[#0d0a1a] to-[#0d0a1a]">
+          <section className="py-16 patner-gradient">
             <div className="container mx-auto px-4">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -361,7 +329,7 @@ export default function Home() {
           </section>
 
           {/* Testimonials */}
-          <section className="py-16 bg-gradient-to-b from-[#0d0a1a] to-[#1a1333]">
+          <section className="py-16 bg-[url('/assets/images/bg-black.png')]">
             <div className="container mx-auto px-4">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -408,7 +376,7 @@ export default function Home() {
           </section>
 
           {/* Newsletter */}
-          <section className="py-16 bg-gradient-to-b from-[#1a1333] to-[#0d0a1a]">
+          <section className="py-16 news-gradient">
             <div className="container mx-auto px-4 text-center">
               <p className="text-sm text-gray-400 mb-4">No Spam Promise</p>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">SUBSCRIBE TO NEWS LETTER !</h2>
@@ -433,7 +401,7 @@ export default function Home() {
         </main>
 
         {/* WhatsApp Banner */}
-        <div className="bg-gradient-to-r from-[#0d0a1a] to-[#1a1333] py-4 border-t border-[#2a1f45]">
+        <div className="bg-[url('/assets/images/bg-black.png')] py-4 border-t border-[#2a1f45]">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center mb-4 md:mb-0">
               <div className="mr-4">
@@ -460,7 +428,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-b from-[#1a1333] to-[#0d0a1a] py-12 border-t border-[#2a1f45]">
+        <footer className="bg-[url('/assets/images/bg-black.png')] py-12 border-t border-[#2a1f45]">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
