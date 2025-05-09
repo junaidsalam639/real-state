@@ -39,3 +39,6 @@ body {
 .news-gradient{
   background: linear-gradient(280.58deg, #492974 -58.12%, #000000 92.13%);
 }
+.testi-gradient{
+  background: linear-gradient(180deg, rgba(73, 41, 116, 0.73) 0%, rgba(0, 0, 0, 0.73) 86.54%);
+}
