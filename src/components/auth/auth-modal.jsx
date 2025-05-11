@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react"
 import { X } from "lucide-react"
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function AuthModal({ isOpen, onClose }) {
@@ -75,8 +77,22 @@ export default function AuthModal({ isOpen, onClose }) {
 }
 
 function LoginForm() {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Invalid email address").required("Email is required"),
+      password: Yup.string().required("Password is required"),
+    }),
+    onSubmit: (values) => {
+      console.log("Login Form Values:", values);
+    },
+  });
+
   return (
-    <form>
+    <form onSubmit={formik.handleSubmit}>
       <div className="mb-4">
         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
           Email Address
@@ -86,7 +102,11 @@ function LoginForm() {
           id="email"
           className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
           placeholder="Enter your email"
+          {...formik.getFieldProps("email")}
         />
+        {formik.touched.email && formik.errors.email ? (
+          <div className="text-red-500 text-sm">{formik.errors.email}</div>
+        ) : null}
       </div>
 
       <div className="mb-4">
@@ -103,7 +123,11 @@ function LoginForm() {
           id="password"
           className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
           placeholder="Enter your password"
+          {...formik.getFieldProps("password")}
         />
+        {formik.touched.password && formik.errors.password ? (
+          <div className="text-red-500 text-sm">{formik.errors.password}</div>
+        ) : null}
       </div>
 
       <button
@@ -155,12 +179,38 @@ function LoginForm() {
         </button>
       </div>
     </form>
-  )
+  );
 }
 
 function SignupForm() {
+  const formik = useFormik({
+    initialValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      city: "",
+      address: "",
+      phone: "",
+      password: "",
+      agree: false,
+    },
+    validationSchema: Yup.object({
+      firstname: Yup.string().required("First Name is required"),
+      lastname: Yup.string().required("Last Name is required"),
+      email: Yup.string().email("Invalid email address").required("Email is required"),
+      city: Yup.string().required("City is required"),
+      address: Yup.string().required("Address is required"),
+      phone: Yup.string().required("Phone Number is required"),
+      password: Yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+      agree: Yup.boolean().oneOf([true], "You must agree to the terms"),
+    }),
+    onSubmit: (values) => {
+      console.log("Form Values:", values);
+    },
+  });
+
   return (
-    <form>
+    <form onSubmit={formik.handleSubmit}>
       <div className="grid md:grid-cols-2 gap-5">
         <div className="mb-4">
           <label htmlFor="firstname" className="block text-sm font-medium text-gray-300 mb-1">
@@ -171,8 +221,13 @@ function SignupForm() {
             id="firstname"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Enter your first name"
+            {...formik.getFieldProps("firstname")}
           />
+          {formik.touched.firstname && formik.errors.firstname ? (
+            <div className="text-red-500 text-sm">{formik.errors.firstname}</div>
+          ) : null}
         </div>
+
         <div className="mb-4">
           <label htmlFor="lastname" className="block text-sm font-medium text-gray-300 mb-1">
             Last Name
@@ -182,19 +237,27 @@ function SignupForm() {
             id="lastname"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Enter your last name"
+            {...formik.getFieldProps("lastname")}
           />
+          {formik.touched.lastname && formik.errors.lastname ? (
+            <div className="text-red-500 text-sm">{formik.errors.lastname}</div>
+          ) : null}
         </div>
 
         <div className="mb-4">
-          <label htmlFor="signup-email" className="block text-sm font-medium text-gray-300 mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
             Email Address
           </label>
           <input
             type="email"
-            id="signup-email"
+            id="email"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Enter your email"
+            {...formik.getFieldProps("email")}
           />
+          {formik.touched.email && formik.errors.email ? (
+            <div className="text-red-500 text-sm">{formik.errors.email}</div>
+          ) : null}
         </div>
 
         <div className="mb-4">
@@ -206,7 +269,11 @@ function SignupForm() {
             id="city"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Enter your city"
+            {...formik.getFieldProps("city")}
           />
+          {formik.touched.city && formik.errors.city ? (
+            <div className="text-red-500 text-sm">{formik.errors.city}</div>
+          ) : null}
         </div>
 
         <div className="mb-4">
@@ -218,7 +285,11 @@ function SignupForm() {
             id="address"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Enter your address"
+            {...formik.getFieldProps("address")}
           />
+          {formik.touched.address && formik.errors.address ? (
+            <div className="text-red-500 text-sm">{formik.errors.address}</div>
+          ) : null}
         </div>
 
         <div className="mb-4">
@@ -230,30 +301,44 @@ function SignupForm() {
             id="phone"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Enter your phone number"
+            {...formik.getFieldProps("phone")}
           />
+          {formik.touched.phone && formik.errors.phone ? (
+            <div className="text-red-500 text-sm">{formik.errors.phone}</div>
+          ) : null}
         </div>
 
         <div className="mb-4 col-span-2">
-          <label htmlFor="signup-password" className="block text-sm font-medium text-gray-300 mb-1">
+          <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-1">
             Password
           </label>
           <input
             type="password"
-            id="signup-password"
+            id="password"
             className="w-full px-3 py-2 bg-[#2a1f45] border border-[#3a2a5a] rounded text-white focus:outline-none focus:ring-0"
             placeholder="Create a password"
+            {...formik.getFieldProps("password")}
           />
+          {formik.touched.password && formik.errors.password ? (
+            <div className="text-red-500 text-sm">{formik.errors.password}</div>
+          ) : null}
         </div>
       </div>
 
-
       <div className="mb-6">
         <label className="flex items-center">
-          <input type="checkbox" className="h-4 w-4 texfocus:ring-0 border-gray-500 rounded" />
+          <input
+            type="checkbox"
+            className="h-4 w-4 focus:ring-0 border-gray-500 rounded"
+            {...formik.getFieldProps("agree")}
+          />
           <span className="ml-2 text-sm text-gray-300">
             I agree to receive property alerts and promotional communications
           </span>
         </label>
+        {formik.touched.agree && formik.errors.agree ? (
+          <div className="text-red-500 text-sm">{formik.errors.agree}</div>
+        ) : null}
       </div>
 
       <button
@@ -263,5 +348,5 @@ function SignupForm() {
         Create Account
       </button>
     </form>
-  )
+  );
 }

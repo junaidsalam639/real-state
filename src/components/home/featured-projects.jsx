@@ -1,9 +1,17 @@
 "use client"
 import { motion } from "framer-motion"
 import HomeCard from "../ui/home-card"
+import { useGetProductsQuery } from "@/service/products/productsApi";
 
 
 function FeaturedProjects({ featuredProjects }) {
+    const { data, isLoading } = useGetProductsQuery();
+
+    if (isLoading) return <>loading...</>
+
+    console.log(data, 'data');
+    
+
     return (
         <>
             <section className="py-16 featured-gradient">
@@ -20,7 +28,7 @@ function FeaturedProjects({ featuredProjects }) {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {featuredProjects.map((project, index) => (
-                           <HomeCard project={project} key={index} />
+                            <HomeCard project={project} key={index} />
                         ))}
                     </div>
                 </div>
