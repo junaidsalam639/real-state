@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-function DetailBanner() {
+function PropertyDetailBanner() {
     return (
         <>
             <div className="relative h-[200px] overflow-hidden">
@@ -20,5 +20,5 @@ function DetailBanner() {
     )
 }
 
-export default DetailBanner
+export default PropertyDetailBanner
 

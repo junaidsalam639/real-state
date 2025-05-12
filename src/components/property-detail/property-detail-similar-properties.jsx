@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react"
 import Link from "next/link"
 import DetailCard from "../ui/detail-card"
 
-function DetailSimilarProperties({ similarProperties }) {
+function PropertyDetailSimilarProperties({ similarProperties }) {
     return (
         <>
             <div className="bg-gradient-to-b from-[#0d0a1a] to-[#1a1333] py-12">
@@ -25,4 +25,4 @@ function DetailSimilarProperties({ similarProperties }) {
     )
 }
 
-export default DetailSimilarProperties
+export default PropertyDetailSimilarProperties

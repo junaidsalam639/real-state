@@ -1,7 +1,7 @@
 import { ArrowLeft, Heart, Share2 } from "lucide-react"
 import Link from "next/link"
 
-function DetailHeader() {
+function PropertyDetailHeader() {
     return (
         <>
             <div className="container mx-auto px-4 md:mt-28 mt-20">
@@ -32,4 +32,4 @@ function DetailHeader() {
     )
 }
 
-export default DetailHeader
+export default PropertyDetailHeader

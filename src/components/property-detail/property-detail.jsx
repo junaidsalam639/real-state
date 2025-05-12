@@ -3,7 +3,7 @@ import { ArrowDownRight, Bath, Bed, Calendar, Download, Square } from "lucide-re
 import Image from "next/image"
 import { useState } from "react"
 
-function PropertyDetail({ propertyFeatures, facilities }) {
+function PropertyPropertyDetail({ propertyFeatures, facilities }) {
     const [tourType, setTourType] = useState("in-person")
 
     return (
@@ -180,4 +180,4 @@ function PropertyDetail({ propertyFeatures, facilities }) {
     )
 }
 
-export default PropertyDetail
+export default PropertyPropertyDetail

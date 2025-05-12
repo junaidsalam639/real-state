@@ -15,7 +15,7 @@ function HomeCard({ project }) {
                 viewport={{ once: true }}
                 className="bg-white rounded-lg overflow-hidden shadow-lg text-black"
             >
-                <Link href={`/detail/41697170`}>
+                <Link href={`/property-detail/41697170`}>
                     <div className="relative h-48 overflow-hidden">
                         <Image src={project.image} alt={project.name} fill
                             className="object-cover transition-all hover:scale-125 duration-300"

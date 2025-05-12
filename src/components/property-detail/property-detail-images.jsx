@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-function DetailImages() {
+function PropertyDetailImages() {
     const [showAllPhotos, setShowAllPhotos] = useState(false)
     return (
         <>
@@ -49,4 +49,4 @@ function DetailImages() {
     )
 }
 
-export default DetailImages
+export default PropertyDetailImages

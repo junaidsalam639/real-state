@@ -42,3 +42,6 @@ body {
 .testi-gradient{
   background: linear-gradient(180deg, rgba(73, 41, 116, 0.73) 0%, rgba(0, 0, 0, 0.73) 86.54%);
 }
+.property-search-gradient{
+  background: conic-gradient(from 180deg at 50% 50%, #3F2464 0deg, #020002 292.5deg, #3F2464 360deg);
+}
