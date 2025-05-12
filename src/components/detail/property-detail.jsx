@@ -12,31 +12,31 @@ function PropertyDetail({ propertyFeatures, facilities }) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="md:col-span-2">
                         <div className="bg-white text-black rounded-lg p-4 mb-8">
-                            <div className="grid grid-cols-4 gap-4">
-                                <div className="flex flex-col items-center">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                                <div className="flex flex-col items-center text-center">
                                     <div className="text-gray-500 mb-2">Bedrooms</div>
-                                    <div className="flex items-center">
+                                    <div className="flex items-center justify-center">
                                         <Bed className="h-5 w-5 mr-1 text-gray-700" />
                                         <span className="font-bold">3 bed</span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col items-center">
+                                <div className="flex flex-col items-center text-center">
                                     <div className="text-gray-500 mb-2">Bathrooms</div>
-                                    <div className="flex items-center">
+                                    <div className="flex items-center justify-center">
                                         <Bath className="h-5 w-5 mr-1 text-gray-700" />
                                         <span className="font-bold">2 bath</span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col items-center">
+                                <div className="flex flex-col items-center text-center">
                                     <div className="text-gray-500 mb-2">Square Area</div>
-                                    <div className="flex items-center">
+                                    <div className="flex items-center justify-center">
                                         <Square className="h-5 w-5 mr-1 text-gray-700" />
                                         <span className="font-bold">1,650 sq ft</span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col items-center">
+                                <div className="flex flex-col items-center text-center">
                                     <div className="text-gray-500 mb-2">Rate/Sq ft</div>
-                                    <div className="flex items-center">
+                                    <div className="flex items-center justify-center">
                                         <ArrowDownRight className="h-5 w-5 mr-1 text-gray-700" />
                                         <span className="font-bold">₹13,636</span>
                                     </div>
@@ -56,24 +56,31 @@ function PropertyDetail({ propertyFeatures, facilities }) {
                         </div>
 
                         <div className="bg-[#222222] rounded-lg p-4 mb-8">
-                            <div className="flex items-center">
-                                <div className="mr-4">
+                            <div className="flex flex-col md:flex-row items-center gap-4">
+                                <div className="w-28 h-28 flex-shrink-0">
                                     <Image
                                         src="/assets/images/detail/men.jpg"
                                         alt="Agent"
-                                        width={60}
-                                        height={60}
-                                        className="rounded-full w-28 h-28 object-cover"
+                                        width={112}
+                                        height={112}
+                                        className="rounded-full w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="flex-grow">
-                                    <h3 className="font-bold">PAWAN SONI</h3>
+
+                                <div className="flex-grow text-center md:text-left">
+                                    <h3 className="font-bold text-lg">PAWAN SONI</h3>
                                     <p className="text-sm text-gray-400">RERA REGISTERED BNO</p>
                                     <p className="text-sm text-gray-400">Indore | Delhi | Mumbai</p>
                                 </div>
-                                <button className="bg-white text-black px-4 py-2 rounded-md cursor-pointer">CALL NOW</button>
+
+                                <div className="mt-4 md:mt-0 md:ml-auto">
+                                    <button className="bg-white text-black px-4 py-2 rounded-md text-sm w-full md:w-auto">
+                                        CALL NOW
+                                    </button>
+                                </div>
                             </div>
                         </div>
+
 
                         <div className="mb-8">
                             <h2 className="text-xl font-bold mb-4">Amenities & Features</h2>

@@ -23,8 +23,8 @@ function DetailCard({ property }) {
                 </div>
                 <div className="p-4">
                     <div className="text-xs text-gray-500 mb-1">{property.type}</div>
-                    <h3 className="font-bold mb-2">{property.name}</h3>
-                    <p className="text-lg font-bold mb-2">₹ {property.price}</p>
+                    <h3 className="font-medium mb-2">{property.name}</h3>
+                    <p className="text-lg font-medium mb-2">₹ {property.price}</p>
                     <div className="flex items-center text-xs text-gray-500">
                         <span className="mr-2">
                             {property.beds} <Bed className="h-3 w-3 inline" />

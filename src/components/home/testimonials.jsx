@@ -30,13 +30,15 @@ function Testimonials({ testimonials }) {
                                 className="testi-gradient p-6 rounded-lg shadow-lg"
                             >
                                 <div className="flex flex-col items-center">
-                                    <Image
-                                        src={testimonial.image || "/placeholder.svg"}
-                                        alt={testimonial.name}
-                                        width={80}
-                                        height={80}
-                                        className="rounded-2xl mb-4 w-32 h-32"
-                                    />
+                                    <div className="relative w-32 h-32 mb-4 rounded-2xl overflow-hidden">
+                                        <Image
+                                            src={testimonial.image || "/placeholder.svg"}
+                                            alt={testimonial.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+
                                     <h3 className="text-lg font-bold mb-2">{testimonial.name}</h3>
                                     <p className="text-sm text-gray-400 text-center mb-4">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor.

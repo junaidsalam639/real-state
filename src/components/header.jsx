@@ -54,7 +54,8 @@ function Header() {
                         <Link href="/agent" className="block text-white hover:text-black text-sm font-normal">AGENT</Link>
                         <Link href="/builder" className="block text-white hover:text-black text-sm font-normal">BUILDER</Link>
                         <Link href="/customer" className="block text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
-                        <Link href="/login" className="inline-block bg-white text-black px-4 py-1.5 rounded text-sm font-medium">LOG IN</Link>
+                        <button
+                            onClick={() => setOpen(true)} className="inline-block bg-white text-black px-4 py-1.5 rounded text-sm font-medium">LOG IN</button>
                     </div>
                 )}
             </header>

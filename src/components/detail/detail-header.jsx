@@ -4,7 +4,7 @@ import Link from "next/link"
 function DetailHeader() {
     return (
         <>
-            <div className="container mx-auto px-4 md:mt-28">
+            <div className="container mx-auto px-4 md:mt-28 mt-20">
                 <div className="flex items-center mb-2">
                     <Link href="/" className="flex items-center text-white">
                         <ArrowLeft className="h-4 w-4 mr-1" />
