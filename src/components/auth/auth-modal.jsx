@@ -199,7 +199,7 @@ function SignupForm() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="grid md:grid-cols-2 gap-5">
-        <div className="mb-4">
+        <div>
           <label htmlFor="firstname" className="block text-sm font-medium text-gray-300 mb-1">
             First Name
           </label>
@@ -215,7 +215,7 @@ function SignupForm() {
           ) : null}
         </div>
 
-        <div className="mb-4">
+        <div>
           <label htmlFor="lastname" className="block text-sm font-medium text-gray-300 mb-1">
             Last Name
           </label>
@@ -231,7 +231,7 @@ function SignupForm() {
           ) : null}
         </div>
 
-        <div className="mb-4">
+        <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
             Email Address
           </label>
@@ -247,7 +247,7 @@ function SignupForm() {
           ) : null}
         </div>
 
-        <div className="mb-4">
+        <div>
           <label htmlFor="city" className="block text-sm font-medium text-gray-300 mb-1">
             City
           </label>
@@ -263,7 +263,7 @@ function SignupForm() {
           ) : null}
         </div>
 
-        <div className="mb-4">
+        <div>
           <label htmlFor="address" className="block text-sm font-medium text-gray-300 mb-1">
             Address
           </label>
@@ -279,7 +279,7 @@ function SignupForm() {
           ) : null}
         </div>
 
-        <div className="mb-4">
+        <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
             Phone Number
           </label>
