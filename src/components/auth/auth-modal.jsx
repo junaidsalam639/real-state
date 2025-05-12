@@ -55,19 +55,6 @@ export default function AuthModal({ isOpen, onClose }) {
               </div>
 
               {activeTab === "login" ? <LoginForm /> : <SignupForm />}
-
-              <div className="mt-6 text-center text-gray-400 text-sm">
-                <p>By continuing, you agree to our</p>
-                <p>
-                  <a href="#" className="text-yellow-500 hover:underline">
-                    Terms of Service
-                  </a>{" "}
-                  and{" "}
-                  <a href="#" className="text-yellow-500 hover:underline">
-                    Privacy Policy
-                  </a>
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
