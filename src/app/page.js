@@ -156,8 +156,8 @@ export default function Home() {
       <div className="flex flex-col min-h-screen  text-white">
         <main className="flex-grow">
           <HeroSection />
-          <FeaturedProjects featuredProjects={featuredProjects} />
           <FounderSection />
+          <FeaturedProjects featuredProjects={featuredProjects} />
           <AiRevolutionSection features={features} />
           <DeveloperBanner />
           <PatnerSection imagesPatner={imagesPatner} />

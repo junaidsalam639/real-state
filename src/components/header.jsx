@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import AuthModal from "./auth/auth-modal";
+import { LogIn } from "lucide-react";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ function Header() {
                         <Link href="/about" className="text-white hover:text-black text-sm font-normal">ABOUT</Link>
                         <Link href="/agent" className="text-white hover:text-black text-sm font-normal">AGENT</Link>
                         <Link href="/builder" className="text-white hover:text-black text-sm font-normal">BUILDER</Link>
-                        <Link href="/customer" className="text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
+                        <Link href="/property-search" className="text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
                         <button
                             onClick={() => setOpen(true)}
                             className="bg-white text-black px-4 py-1.5 rounded text-sm font-medium cursor-pointer"
@@ -53,9 +54,13 @@ function Header() {
                         <Link href="/about" className="block text-white hover:text-black text-sm font-normal">ABOUT</Link>
                         <Link href="/agent" className="block text-white hover:text-black text-sm font-normal">AGENT</Link>
                         <Link href="/builder" className="block text-white hover:text-black text-sm font-normal">BUILDER</Link>
-                        <Link href="/customer" className="block text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
+                        <Link href="/property-search" className="block text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
                         <button
-                            onClick={() => setOpen(true)} className="inline-block bg-white text-black px-4 py-1.5 rounded text-sm font-medium">LOG IN</button>
+                            onClick={() => setOpen(true)}
+                            className="inline-flex items-center bg-white text-black px-4 py-1.5 rounded text-sm font-medium"
+                        >
+                            <LogIn className="w-4 h-4" />
+                        </button>
                     </div>
                 )}
             </header>
