@@ -19,25 +19,25 @@ function PropertySearchBanner() {
                         <div className="max-w-md">
                             <div className="flex space-x-2">
                                 <button
-                                    className={`px-6 py-3 w-40 rounded font-medium text-white cursor-pointer ${activeTab === "BUY" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
+                                    className={`md:px-6 px-2 py-3 w-28 md:text-lg text-sm md:w-40 rounded font-medium text-white cursor-pointer ${activeTab === "BUY" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
                                     onClick={() => setActiveTab("BUY")}
                                 >
                                     BUY
                                 </button>
                                 <button
-                                    className={`px-6 py-3 w-40 rounded font-medium text-white cursor-pointer ${activeTab === "RENT" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
+                                    className={`md:px-6 px-2 py-3 w-28 md:text-lg text-sm md:w-40 rounded font-medium text-white cursor-pointer ${activeTab === "RENT" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
                                     onClick={() => setActiveTab("RENT")}
                                 >
                                     RENT
                                 </button>
                                 <button
-                                    className={`px-6 py-3 w-40 rounded font-medium text-white cursor-pointer ${activeTab === "SELL" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
+                                    className={`md:px-6 px-2 py-3 w-28 md:text-lg text-sm md:w-40 rounded font-medium text-white cursor-pointer ${activeTab === "SELL" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
                                     onClick={() => setActiveTab("SELL")}
                                 >
                                     SELL
                                 </button>
                                 <button
-                                    className={`px-6 py-3 w-40 rounded font-medium text-white cursor-pointer ${activeTab === "PROJECTS" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
+                                    className={`md:px-6 px-2 py-3 w-28 md:text-lg text-sm md:w-40 rounded font-medium text-white cursor-pointer ${activeTab === "PROJECTS" ? "bg-[#3a2a5a]" : "bg-[#2a1f45]"}`}
                                     onClick={() => setActiveTab("PROJECTS")}
                                 >
                                     PROJECTS

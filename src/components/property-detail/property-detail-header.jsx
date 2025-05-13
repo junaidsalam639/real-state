@@ -33,3 +33,4 @@ function PropertyDetailHeader() {
 }
 
 export default PropertyDetailHeader
+

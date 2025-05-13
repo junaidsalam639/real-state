@@ -4,53 +4,70 @@ import Image from "next/image"
 
 function AiRevolutionSection({ features }) {
     return (
-        <>
-            <section className="py-16 revolution-gradient relative">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="col-span-1 flex flex-col justify-center"
-                        >
-                            <div className="mt-4">
-                                <Image
-                                    src="/assets/images/roboto.png"
-                                    alt="AI Robot"
-                                    width={300}
-                                    height={300}
-                                    className="rounded-lg w-full h-full object-contain"
-                                />
-                            </div>
-                        </motion.div>
+        <section className="py-16 revolution-gradient relative">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                        <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {features.map((feature, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                    className="p-6 rounded-lg shadow-lg"
-                                >
-                                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                                        {feature.icon}
-                                    </div>
-                                    <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                                    <p className="text-gray-400 text-sm">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                                        dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-                                    </p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", type: "spring", bounce: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        className="col-span-1 flex flex-col justify-center"
+                    >
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring", stiffness: 200 }}
+                            className="mt-4"
+                        >
+                            <Image
+                                src="/assets/images/roboto.png"
+                                alt="AI Robot"
+                                width={300}
+                                height={300}
+                                className="rounded-lg w-full h-full object-contain drop-shadow-xl"
+                            />
+                        </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                        className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.3 }}
+                        variants={{
+                            hidden: {},
+                            visible: {
+                                transition: {
+                                    staggerChildren: 0.15,
+                                },
+                            },
+                        }}
+                    >
+                        {features.map((feature, index) => (
+                            <motion.div
+                                key={index}
+                                className="p-6 rounded-lg shadow-lg bg-white/10 backdrop-blur-lg border border-white/10 hover:shadow-xl transition-shadow duration-300"
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+                                }}
+                                whileHover={{ scale: 1.03 }}
+                            >
+                                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-white/20 text-white text-xl">
+                                    {feature.icon}
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+                                    dignissim sit amet, adipiscing nec, ultricies sed, dolor.
+                                </p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     )
 }
 
