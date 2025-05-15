@@ -21,7 +21,7 @@ function FounderSection() {
 
     return (
         <section ref={ref} className="pt-12 founder-gradient relative overflow-hidden">
-            <div className="container mx-auto relative z-50">
+            <div className="container mx-auto relative z-40">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:px-28">
                     <motion.div
                         className="w-full md:w-96"

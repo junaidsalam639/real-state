@@ -3,6 +3,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { Plus } from "lucide-react";
 
 function AnimatedCounter({ target }) {
     const count = useMotionValue(0);
@@ -25,7 +26,7 @@ function AnimatedCounter({ target }) {
         };
     }, [count, target, rounded]);
 
-    return <span>{displayValue}+</span>;
+    return <span className="flex items-center">{displayValue}<Plus /></span>;
 }
 
 function HeroSection() {
@@ -74,19 +75,19 @@ function HeroSection() {
                 <div className="flex flex-wrap md:gap-12 mt-12">
                     <div className="text-center pr-5 md:pr-12 border-r-2 border-white">
                         <h2 className="text-2xl md:text-5xl font-bold">
-                            {inView && <AnimatedCounter target={300} />}+
+                            {inView && <AnimatedCounter target={300} />}
                         </h2>
                         <p className="text-lg font-bold mt-1">HAPPY<br />CUSTOMERS</p>
                     </div>
                     <div className="text-center pr-5 md:pr-12 border-r-2 border-white">
                         <h2 className="text-2xl md:text-5xl font-bold">
-                            {inView && <AnimatedCounter target={900} />}+
+                            {inView && <AnimatedCounter target={900} />}
                         </h2>
                         <p className="text-lg font-bold mt-1">RERA<br />PROJECTS</p>
                     </div>
                     <div className="text-center">
                         <h2 className="text-2xl md:text-5xl font-bold">
-                            {inView && <AnimatedCounter target={200} />}+
+                            {inView && <AnimatedCounter target={200} />}
                         </h2>
                         <p className="text-lg font-bold mt-1">AGENTS<br />NETWORK</p>
                     </div>
