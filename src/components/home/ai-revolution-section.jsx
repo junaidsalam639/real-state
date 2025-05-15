@@ -4,7 +4,7 @@ import Image from "next/image"
 
 function AiRevolutionSection({ features }) {
     return (
-        <section className="py-16 revolution-gradient relative">
+        <section className="revolution-gradient relative">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -47,14 +47,14 @@ function AiRevolutionSection({ features }) {
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
-                                className="p-6 rounded-lg shadow-lg bg-white/10 backdrop-blur-lg border border-white/10 hover:shadow-xl transition-shadow duration-300"
+                                className="p-6 rounded-lg shadow-lg cursor-pointer text-center"
                                 variants={{
                                     hidden: { opacity: 0, y: 30 },
                                     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
                                 }}
                                 whileHover={{ scale: 1.03 }}
                             >
-                                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-white/20 text-white text-xl">
+                                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-white/20 text-white text-xl mx-auto">
                                     {feature.icon}
                                 </div>
                                 <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>

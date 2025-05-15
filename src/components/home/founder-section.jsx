@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer"
 
 function FounderSection() {
     const { ref, inView } = useInView({
-        triggerOnce: false, 
+        triggerOnce: false,
         threshold: 0.2,
     });
 
@@ -20,10 +20,9 @@ function FounderSection() {
     };
 
     return (
-        <section ref={ref} className="py-12 founder-gradient relative overflow-hidden">
-            <div className="container mx-auto">
+        <section ref={ref} className="pt-12 founder-gradient relative overflow-hidden">
+            <div className="container mx-auto relative z-50">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:px-28">
-                    
                     <motion.div
                         className="w-full md:w-96"
                         variants={imageVariants}
@@ -69,6 +68,14 @@ function FounderSection() {
                         </div>
                     </motion.div>
                 </div>
+            </div>
+            <div className="absolute bottom-0 left-0">
+                <Image
+                    src="/assets/images/vector.png"
+                    width={600}
+                    height={600}
+                    alt="Vector Image"
+                />
             </div>
         </section>
     )

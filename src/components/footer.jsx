@@ -91,7 +91,7 @@ function Footer() {
                     </div>
 
                     <div className="border-t border-[#2a1f45] mt-8 pt-8 text-center text-sm text-gray-500">
-                        <p>© 2025 RX100. Your Next Realty Solution. Refined by Creed.</p>
+                        <p>© 2025 RX100. Your Next Realty Solution.</p>
                         <p className="mt-1">Website by <span className="font-medium text-gray-400">iCreate</span></p>
                     </div>
 

@@ -15,9 +15,9 @@ function HomeCard({ project }) {
             className="bg-white rounded-lg overflow-hidden shadow-lg text-black transition-transform"
         >
             <Link href={`/property-detail/41697170`}>
-                <div className="relative h-48 overflow-hidden group">
+                <div className="relative group">
                     <motion.div
-                        className="w-full h-full"
+                        className="w-full overflow-hidden h-48"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
                     >
@@ -73,7 +73,7 @@ function HomeCard({ project }) {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="mt-4 font-bold"
+                        className="mt-4 font-bold text-lg"
                     >
                         {project.price}
                     </motion.p>
