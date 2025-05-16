@@ -26,7 +26,7 @@ function AnimatedCounter({ target }) {
         };
     }, [count, target, rounded]);
 
-    return <span className="flex items-center">{displayValue}<Plus /></span>;
+    return <span className="flex items-center font-bold">{displayValue}<Plus /></span>;
 }
 
 function HeroSection() {
@@ -67,29 +67,29 @@ function HeroSection() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
                     Digital Platform For Builders, Agents & Customers.
                 </h1>
-                <p className="text-lg mb-8 max-w-xl font-normal">
+                <p className="md:text-lg text-sm mb-8 max-w-xl font-normal">
                     We provide a complete service for the sale, purchase or rental of real estate. Get access to exclusive
                     network & properties that suit your needs.
                 </p>
     
-                <div className="flex flex-wrap md:gap-12 mt-12">
+                <div className="flex flex-wrap md:gap-12 mt-12 md:justify-normal justify-between">
                     <div className="text-center pr-5 md:pr-12 border-r-2 border-white">
                         <h2 className="text-2xl md:text-5xl font-bold">
                             {inView && <AnimatedCounter target={300} />}
                         </h2>
-                        <p className="text-lg font-bold mt-1">HAPPY<br />CUSTOMERS</p>
+                        <p className="md:text-lg text-sm font-bold mt-1">HAPPY<br />CUSTOMERS</p>
                     </div>
                     <div className="text-center pr-5 md:pr-12 border-r-2 border-white">
                         <h2 className="text-2xl md:text-5xl font-bold">
                             {inView && <AnimatedCounter target={900} />}
                         </h2>
-                        <p className="text-lg font-bold mt-1">RERA<br />PROJECTS</p>
+                        <p className="md:text-lg text-sm font-bold mt-1">RERA<br />PROJECTS</p>
                     </div>
                     <div className="text-center">
                         <h2 className="text-2xl md:text-5xl font-bold">
                             {inView && <AnimatedCounter target={200} />}
                         </h2>
-                        <p className="text-lg font-bold mt-1">AGENTS<br />NETWORK</p>
+                        <p className="md:text-lg text-sm font-bold mt-1">AGENTS<br />NETWORK</p>
                     </div>
                 </div>
             </motion.div>

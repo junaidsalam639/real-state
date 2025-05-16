@@ -13,7 +13,7 @@ function AiRevolutionSection({ features }) {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut", type: "spring", bounce: 0.3 }}
                         viewport={{ once: false, amount: 0.3 }}
-                        className="col-span-1 flex flex-col justify-center"
+                        className="col-span-1 md:flex flex-col justify-center hidden"
                     >
                         <motion.div
                             whileHover={{ scale: 1.05 }}
