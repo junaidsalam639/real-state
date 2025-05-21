@@ -164,8 +164,10 @@ export default function PropertySearch() {
         <>
             <Header />
             <div className="property-search-gradient text-white">
-                <PropertySearchBanner />
-                <PropertySearchBar />
+                <div className="relative">
+                    <PropertySearchBanner />
+                    <PropertySearchBar />
+                </div>
                 <PropertyDetailMainSection properties={properties} />
                 <PropertySearchReadyProjects readyToMoveProjects={readyToMoveProjects} />
                 <PropertySearchRecommended recommendedProperties={recommendedProperties} />

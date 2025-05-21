@@ -14,14 +14,14 @@ function PropertySearchListing({ properties, setShowFilters }) {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                    <button className="bg-[#1a1333] hover:bg-[#2a1f45] px-3 py-1 rounded-full text-sm cursor-pointer">All Properties</button>
-                    <button className="bg-[#1a1333] hover:bg-[#2a1f45] px-3 py-1 rounded-full text-sm cursor-pointer">Ready to move</button>
-                    <button className="bg-[#1a1333] hover:bg-[#2a1f45] px-3 py-1 rounded-full text-sm cursor-pointer">
+                    <button className="bg-white text-black py-2 rounded-full w-28 text-sm cursor-pointer">All Properties</button>
+                    <button className="bg-[#5F5769] py-2 rounded-full w-32 text-sm cursor-pointer">Ready to move</button>
+                    <button className="bg-[#5F5769] py-2 rounded-full w-40 text-sm cursor-pointer">
                         Under Development
                     </button>
-                    <button className="bg-[#1a1333] hover:bg-[#2a1f45] px-3 py-1 rounded-full text-sm cursor-pointer">Furnished</button>
-                    <button className="bg-[#1a1333] hover:bg-[#2a1f45] px-3 py-1 rounded-full text-sm cursor-pointer">New Projects</button>
-                    <button className="bg-[#1a1333] hover:bg-[#2a1f45] px-3 py-1 rounded-full text-sm cursor-pointer">Reset all</button>
+                    <button className="bg-[#5F5769] py-2 rounded-full w-28 text-sm cursor-pointer">Furnished</button>
+                    <button className="bg-[#5F5769] py-2 rounded-full w-32 text-sm cursor-pointer">New Projects</button>
+                    <button className="bg-black py-2 rounded-full w-32 text-sm cursor-pointer">Reset all</button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {properties.map((property, index) => (

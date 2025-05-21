@@ -4,9 +4,9 @@ import React from 'react';
 function PropertySearchReadyProjects({ readyToMoveProjects }) {
     return (
         <>
-            <div className="py-12">
+            <div className="py-5">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-2xl font-bold mb-8">Ready to move projects</h2>
+                    <h2 className="text-2xl font-bold mb-8 text-center">Ready to move projects</h2>
 
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                         {readyToMoveProjects.map((project, index) => (

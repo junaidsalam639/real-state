@@ -12,7 +12,7 @@ function DetailSearchCard({ property }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg overflow-hidden p-4"
+                className="bg-white rounded-2xl overflow-hidden p-4"
             >
                 <div className="relative">
                     <Image
@@ -20,14 +20,14 @@ function DetailSearchCard({ property }) {
                         alt={property.title}
                         width={500}
                         height={300}
-                        className="w-full h-[200px] object-cover rounded-xl"
+                        className="w-full h-[200px] object-cover rounded-2xl"
                     />
                     <div className="absolute top-3 left-3">
-                        <span className="bg-black text-white text-xs px-2 py-1 rounded">{property.status}</span>
+                        <span className="bg-black text-white text-xs px-4 py-2 rounded-full">{property.status}</span>
                     </div>
                     {property.featured && (
-                        <div className="absolute top-3 right-3">
-                            <span className="bg-black text-white text-xs px-2 py-1 rounded">FEATURED</span>
+                        <div className="absolute top-3 left-28">
+                            <span className="bg-white text-black text-xs px-4 py-2 rounded-full">FEATURED</span>
                         </div>
                     )}
                 </div>
@@ -36,9 +36,12 @@ function DetailSearchCard({ property }) {
                         <h3 className="text-lg font-bold text-black">{property.title}</h3>
                         <p className="text-lg font-bold text-black">₹ {property.price} Cr.</p>
                     </div>
-                    <div className="flex items-center text-black text-sm mb-3">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span className="text-black">{property.location}</span>
+                    <div className="flex justify-between items-start mb-2">
+                        <div className="flex items-center text-black text-sm mb-3">
+                            <MapPin className="h-4 w-4 mr-1" />
+                            <span className="text-black">{property.location}</span>
+                        </div>
+                        <button className="bg-black text-white text-xs px-3 py-1 rounded-lg cursor-pointer">CALL NOW</button>
                     </div>
                     <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-4 text-sm">
@@ -55,7 +58,6 @@ function DetailSearchCard({ property }) {
                                 <span className="text-black">{property.sqft} sqft</span>
                             </div>
                         </div>
-                        <button className="bg-black text-white text-xs px-3 py-1 rounded">CALL NOW</button>
                     </div>
                 </div>
             </motion.div>
