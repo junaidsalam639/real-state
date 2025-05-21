@@ -9,6 +9,7 @@ import NewsLetter from "@/components/home/news-letter"
 import WhatsapBanner from "@/components/home/whatsap-banner"
 import Footer from "@/components/footer"
 import FeaturedProjects from "@/components/home/featured-projects"
+import Image from "next/image"
 
 export default function Home() {
 
@@ -16,27 +17,33 @@ export default function Home() {
   const featuredProjects = [
     {
       name: "MNB Ananta Vilasa",
+      builder: "MNB",
       location: "Sector 56, Gurgaon",
       price: "6.45 Cr - 8.70 Cr",
       image:
         "/assets/images/project/project1.webp",
-      logo: "MNB",
+      logo:
+        "/assets/images/project/project1.webp",
     },
     {
       name: "Royal Residences",
+      builder: "TREVOC",
       location: "Sector 56, Gurgaon",
       price: "6.81 Cr - 8.45 Cr",
       image:
         "/assets/images/project/project2.webp",
-      logo: "TREVOC",
+      logo:
+        "/assets/images/project/project2.webp",
     },
     {
       name: "Elan The Emperor",
+      builder: "Elan",
       location: "Sector 106, Gurgaon",
       price: "12.99 Cr - 18.11 Cr",
       image:
         "/assets/images/project/project3.webp",
-      logo: "ELAN",
+      logo:
+        "/assets/images/project/project3.webp",
     },
   ]
 
