@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const images = new Array(5).fill('/assets/images/search/banner.jpg'); // repeat 5 times
+const images = new Array(5).fill('/assets/images/search/banner.jpg'); // 5 repeated images
 
 function PropertySearchBanner() {
     return (
@@ -12,13 +12,16 @@ function PropertySearchBanner() {
                 animate={{ x: ['0%', '-100%'] }}
                 transition={{
                     repeat: Infinity,
-                    duration: 20,
                     ease: 'linear',
+                    duration: 25, // 5s per slide (5 slides * 5s = 25s full loop)
                 }}
             >
-                {/* Repeat same image 5 times */}
+                {/* First batch of images */}
                 {images.map((src, index) => (
-                    <div key={index} className="relative h-[300px] w-[100vw] shrink-0">
+                    <div
+                        key={index}
+                        className="relative h-[300px] w-[100vw] shrink-0"
+                    >
                         <Image
                             src={src}
                             alt={`Slider Image ${index + 1}`}
@@ -27,12 +30,15 @@ function PropertySearchBanner() {
                         />
                     </div>
                 ))}
-                {/* Duplicate again for seamless loop */}
+                {/* Duplicate for seamless transition */}
                 {images.map((src, index) => (
-                    <div key={`dup-${index}`} className="relative h-[300px] w-[100vw] shrink-0">
+                    <div
+                        key={`dup-${index}`}
+                        className="relative h-[300px] w-[100vw] shrink-0"
+                    >
                         <Image
                             src={src}
-                            alt={`Slider Duplicate ${index + 1}`}
+                            alt={`Slider Image Duplicate ${index + 1}`}
                             fill
                             className="object-cover"
                         />
