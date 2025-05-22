@@ -11,7 +11,7 @@ function PropertyPropertyDetail({ propertyFeatures, facilities }) {
             <div className="container mx-auto px-4 py-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="md:col-span-2">
-                        <div className="bg-white text-black rounded-lg p-4 mb-8">
+                        <div className="bg-white rounded-lg p-4 mb-8">
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
                                 <div className="flex flex-col items-center text-center">
                                     <div className="text-gray-500 mb-2">Bedrooms</div>
@@ -46,16 +46,12 @@ function PropertyPropertyDetail({ propertyFeatures, facilities }) {
 
                         <div className="mb-8">
                             <h2 className="text-2xl font-bold mb-4">About this home</h2>
-                            <p className="text-white mb-4">
-                                Physical space is often conceived in three linear dimensions, although modern physicists usually
-                                consider Physical space is often conceived in three linear dimensions, although modern physicists
-                                usually can Physical space is often conceived in three linear dimensions, although modern physicists
-                                usually can Physical space is often conceived in three linear dimensions, although modern physicists
-                                usually can
+                            <p className="mb-4">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, explicabo rerum. Culpa ut recusandae aspernatur eum explicabo, tempora numquam ad accusamus iste est. Aliquid, id adipisci. Ducimus dicta omnis natus, necessitatibus vel corporis voluptas eius hic molestias eveniet eum nobis nemo quidem magni id consequuntur voluptate. Laboriosam, sed! Ea, voluptas.
                             </p>
                         </div>
 
-                        <div className="bg-[#222222] rounded-lg p-4 mb-8">
+                        <div className="bg-white rounded-lg p-4 mb-8">
                             <div className="flex flex-col md:flex-row items-center gap-4">
                                 <div className="w-28 h-28 flex-shrink-0">
                                     <Image
@@ -68,13 +64,13 @@ function PropertyPropertyDetail({ propertyFeatures, facilities }) {
                                 </div>
 
                                 <div className="flex-grow text-center md:text-left">
-                                    <h3 className="font-bold text-lg">PAWAN SONI</h3>
-                                    <p className="text-sm text-gray-400">RERA REGISTERED BNO</p>
-                                    <p className="text-sm text-gray-400">Indore | Delhi | Mumbai</p>
+                                    <h3 className="font-bold text-lg text-black">PAWAN SONI</h3>
+                                    <p className="text-sm text-black">RERA REGISTERED BNO</p>
+                                    <p className="text-sm text-black">Indore | Delhi | Mumbai</p>
                                 </div>
 
                                 <div className="mt-4 md:mt-0 md:ml-auto">
-                                    <button className="bg-white text-black px-4 py-2 rounded-md text-sm w-full md:w-auto">
+                                    <button className="bg-black text-white px-4 py-2 rounded-md text-sm w-full md:w-auto">
                                         CALL NOW
                                     </button>
                                 </div>
@@ -124,7 +120,7 @@ function PropertyPropertyDetail({ propertyFeatures, facilities }) {
                                     className="object-cover"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="bg-[#1a1333]/80 p-4 rounded-lg">
+                                    <div className="bg-[#1a1333]/80 text-white p-4 rounded-lg">
                                         <p className="text-center">Interactive map will be displayed here</p>
                                     </div>
                                 </div>

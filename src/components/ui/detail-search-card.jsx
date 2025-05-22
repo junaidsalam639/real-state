@@ -12,7 +12,7 @@ function DetailSearchCard({ property }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl overflow-hidden p-4"
+                className="bg-white rounded-2xl overflow-hidden p-4 detail-search-card-shadow"
             >
                 <div className="relative">
                     <Image
@@ -41,7 +41,7 @@ function DetailSearchCard({ property }) {
                             <MapPin className="h-4 w-4 mr-1" />
                             <span className="text-black">{property.location}</span>
                         </div>
-                        <button className="bg-black text-white text-xs px-3 py-1 rounded-lg cursor-pointer">CALL NOW</button>
+                        <button className="cursor-pointer bg-black text-white text-xs px-4 py-2 rounded-full">CALL NOW</button>
                     </div>
                     <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-4 text-sm">

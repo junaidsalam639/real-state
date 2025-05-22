@@ -22,7 +22,7 @@ function Header() {
                         <Link href="/about" className="text-white hover:text-black text-sm font-normal">ABOUT</Link>
                         <Link href="/agent" className="text-white hover:text-black text-sm font-normal">AGENT</Link>
                         <Link href="/builder" className="text-white hover:text-black text-sm font-normal">BUILDER</Link>
-                        <Link href="/property-search" className="text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
+                        <Link href="/property" className="text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
                         <button
                             onClick={() => setOpen(true)}
                             className="bg-white text-black px-4 py-1.5 rounded text-sm font-medium cursor-pointer"
@@ -54,7 +54,7 @@ function Header() {
                         <Link href="/about" className="block text-white hover:text-black text-sm font-normal">ABOUT</Link>
                         <Link href="/agent" className="block text-white hover:text-black text-sm font-normal">AGENT</Link>
                         <Link href="/builder" className="block text-white hover:text-black text-sm font-normal">BUILDER</Link>
-                        <Link href="/property-search" className="block text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
+                        <Link href="/property" className="block text-white hover:text-black text-sm font-normal">CUSTOMER</Link>
                         <button
                             onClick={() => setOpen(true)}
                             className="inline-flex items-center bg-white text-black px-4 py-1.5 rounded text-sm font-medium"

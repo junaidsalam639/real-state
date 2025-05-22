@@ -7,6 +7,13 @@ function PropertySearchFilterSidebar({ showFilters, setShowFilters }) {
     const [propertyPurpose, setPropertyPurpose] = useState("Buy");
     const [priceRange, setPriceRange] = useState([0, 10000]);
     const [furnishedType, setFurnishedType] = useState("Furnished");
+    const [value, setValue] = useState(5000);
+
+    const handleChange = (e) => {
+        setValue(Number(e.target.value));
+        const percent = (Number(e.target.value) / 10000) * 100;
+        e.target.style.setProperty('--progress', `${percent}%`);
+    };
 
     return (
         <>
@@ -198,7 +205,14 @@ function PropertySearchFilterSidebar({ showFilters, setShowFilters }) {
                         />
                     </div>
                     <div className="flex justify-between text-xs text-black mt-4 mb-2"><span>1lakh</span><span>10000</span></div>
-                    <input min="0" max="10000" class="w-full bg-[#1A1A1A]" type="range" value="10000" />
+                    <input
+                        type="range"
+                        min="0"
+                        max="10000"
+                        value={value}
+                        onChange={handleChange}
+                        className="custom-range"
+                    />
                 </div>
 
                 <div className="mb-4">
@@ -220,7 +234,14 @@ function PropertySearchFilterSidebar({ showFilters, setShowFilters }) {
                         />
                     </div>
                     <div className="flex justify-between text-xs text-black mt-4 mb-2"><span>0</span><span>3200</span></div>
-                    <input min="0" max="10000" class="w-full bg-[#1A1A1A]" type="range" value="10000" />
+                    <input
+                        type="range"
+                        min="0"
+                        max="10000"
+                        value={value}
+                        onChange={handleChange}
+                        className="custom-range"
+                    />
                 </div>
 
 
@@ -280,7 +301,7 @@ function PropertySearchFilterSidebar({ showFilters, setShowFilters }) {
                 </div>
 
 
-             
+
             </div>
 
         </>

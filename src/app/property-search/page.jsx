@@ -1,5 +1,3 @@
-import PropertySearchBanner from "@/components/property-search/property-search-banner"
-import PropertySearchBar from "@/components/property-search/property-search-bar"
 import PropertySearchReadyProjects from "@/components/property-search/property-search-ready-projects"
 import PropertySearchRecommended from "@/components/property-search/property-search-recomended"
 import PropertySearchPopularSearch from "@/components/property-search/property-search-popular-search"
@@ -7,6 +5,8 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsapBanner from "@/components/home/whatsap-banner"
 import PropertyDetailMainSection from "@/components/property-search/property-detail-main-section"
+import SliderBanner from "@/components/ui/slider-banner"
+import PropertySearchBar from "@/components/ui/property-search-bar"
 
 export default function PropertySearch() {
 
@@ -157,6 +157,18 @@ export default function PropertySearch() {
         }
     ]
 
+    const bannerImages = [
+        {
+            id: 1,
+            src: "/assets/images/search/banner.jpg",
+            alt: "Luxury Home Exterior"
+        },
+        {
+            id: 2,
+            src: "/assets/images/search/banner.jpg",
+            alt: "Luxury Home Exterior"
+        }
+    ];
 
 
     return (
@@ -164,10 +176,8 @@ export default function PropertySearch() {
         <>
             <Header />
             <div className="property-search-gradient text-white">
-                <div className="relative">
-                    <PropertySearchBanner />
-                    <PropertySearchBar />
-                </div>
+                <SliderBanner bannerImages={bannerImages} />
+                <PropertySearchBar />
                 <PropertyDetailMainSection properties={properties} />
                 <PropertySearchReadyProjects readyToMoveProjects={readyToMoveProjects} />
                 <PropertySearchRecommended recommendedProperties={recommendedProperties} />
