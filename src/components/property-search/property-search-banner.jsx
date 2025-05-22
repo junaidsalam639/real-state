@@ -52,7 +52,7 @@ const PropertySearchBanner = () => {
   };
 
   return (
-    <div className="relative h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-md">
+    <div className="relative h-[300px] overflow-hidden rounded-md">
       {/* Gradient overlay for improved text visibility */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10 z-10"></div>
       
@@ -78,7 +78,7 @@ const PropertySearchBanner = () => {
       {/* Banner content - optional heading/text */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
         <div className="text-center px-4">
-          <motion.h1 
+{/*           <motion.h1 
             className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ const PropertySearchBanner = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             Discover the perfect property that suits your lifestyle
-          </motion.p>
+          </motion.p> */}
         </div>
       </div>
     </div>
