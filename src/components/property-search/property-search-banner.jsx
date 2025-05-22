@@ -1,35 +1,43 @@
 'use client';
 import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+const images = new Array(5).fill('/assets/images/search/banner.jpg'); // repeat 5 times
 
 function PropertySearchBanner() {
-    const controls = useAnimation();
-
-    useEffect(() => {
-        const animate = async () => {
-            while (true) {
-                await controls.start({ x: 0, opacity: 1, transition: { duration: 1 } });
-                await controls.start({ x: '-10%', transition: { duration: 1.5 } });
-                await controls.start({ x: 0, transition: { duration: 1.5 } });
-            }
-        };
-        animate();
-    }, [controls]);
-
     return (
-        <div className="relative h-[300px] overflow-hidden">
+        <div className="relative h-[300px] overflow-hidden bg-black">
             <motion.div
-                className="absolute inset-0"
-                initial={{ x: 0, opacity: 0 }}
-                animate={controls}
+                className="flex absolute top-0 left-0 w-max h-full"
+                animate={{ x: ['0%', '-100%'] }}
+                transition={{
+                    repeat: Infinity,
+                    duration: 20,
+                    ease: 'linear',
+                }}
             >
-                <Image
-                    src="/assets/images/search/banner.jpg"
-                    alt="Real Estate Banner"
-                    fill
-                    className="object-cover"
-                />
+                {/* Repeat same image 5 times */}
+                {images.map((src, index) => (
+                    <div key={index} className="relative h-[300px] w-[100vw] shrink-0">
+                        <Image
+                            src={src}
+                            alt={`Slider Image ${index + 1}`}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                ))}
+                {/* Duplicate again for seamless loop */}
+                {images.map((src, index) => (
+                    <div key={`dup-${index}`} className="relative h-[300px] w-[100vw] shrink-0">
+                        <Image
+                            src={src}
+                            alt={`Slider Duplicate ${index + 1}`}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                ))}
             </motion.div>
         </div>
     );
