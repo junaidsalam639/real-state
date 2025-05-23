@@ -11,7 +11,7 @@ function Header() {
 
     return (
         <>
-            <header className="fixed top-0 z-50 w-full bg-transparent backdrop-blur-sm">
+            {/* <header className="fixed top-0 z-50 w-full bg-transparent backdrop-blur-sm">
                 <div className="container mx-auto px-4 py-5 flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold text-white flex items-center">
                         <Image src="/assets/logo/logo.png" alt="Logo" width={100} height={100} />
@@ -64,11 +64,10 @@ function Header() {
                     </div>
                 )}
             </header>
-
-            <AuthModal isOpen={open} onClose={() => setOpen(false)} />
-
+            <AuthModal isOpen={open} onClose={() => setOpen(false)} /> */}
         </>
     )
 }
 
 export default Header
+

@@ -165,7 +165,12 @@ export default function PropertySearch() {
         },
         {
             id: 2,
-            src: "/assets/images/search/banner.jpg",
+            src: "/assets/images/search/bottom-banner.png",
+            alt: "Luxury Home Exterior"
+        },
+        {
+            id: 3,
+            src: "/assets/images/banner.png",
             alt: "Luxury Home Exterior"
         }
     ];

@@ -5,7 +5,7 @@ function PropertyDetailHeader() {
     return (
         <>
             <div className="container mx-auto px-4 md:mt-28 mt-20">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center mb-2 justify-between">
                     <Link href="/" className="flex items-center">
                         <ArrowLeft className="h-4 w-4 mr-1" />
                         <span>Back</span>

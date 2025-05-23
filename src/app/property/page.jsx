@@ -4,7 +4,6 @@ import WhatsapBanner from "@/components/home/whatsap-banner"
 import SliderBanner from "@/components/ui/slider-banner"
 import PropertySearchBar from "@/components/ui/property-search-bar"
 import SquareCard from "@/components/property/square-card"
-import DetailSearchCard from "@/components/ui/detail-search-card"
 import PropertyCard from "@/components/property/property-card"
 import IPhoneBanner from "@/components/ui/i-phone-banner"
 import CitiesCard from "@/components/property/cities-card"
@@ -19,7 +18,12 @@ export default function Property() {
         },
         {
             id: 2,
-            src: "/assets/images/search/banner.jpg",
+            src: "/assets/images/search/bottom-banner.png",
+            alt: "Luxury Home Exterior"
+        },
+        {
+            id: 3,
+            src: "/assets/images/banner.png",
             alt: "Luxury Home Exterior"
         }
     ];

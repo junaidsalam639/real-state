@@ -3,7 +3,7 @@ import { Phone } from "lucide-react"
 function Footer() {
     return (
         <>
-            <footer className="bg-[url('/assets/images/bg-black.png')] py-12 border-t border-[#2a1f45]">
+            {/* <footer className="bg-[url('/assets/images/bg-black.png')] py-12 border-t border-[#2a1f45]">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <div>
@@ -96,7 +96,7 @@ function Footer() {
                     </div>
 
                 </div>
-            </footer>
+            </footer> */}
         </>
     )
 }

@@ -8,6 +8,7 @@ import PropertyDetailImages from "@/components/property-detail/property-detail-i
 import PropertyDetailSimilarProperties from "@/components/property-detail/property-detail-similar-properties"
 
 function PropertyDetailPage() {
+
     const propertyFeatures = [
         "3 Bedrooms",
         "2 Baths",
@@ -70,17 +71,17 @@ function PropertyDetailPage() {
     return (
         <>
             <Header />
-            <div className={`flex flex-col min-h-screen text-black`}>
-                <main className={`flex-grow bg-[#F2F4F7] py-4`}>
-                    <PropertyDetailHeader />
-                    <PropertyDetailImages />
-                    <PropertyPropertyDetail propertyFeatures={propertyFeatures} facilities={facilities} />
-                    <PropertyDetailSimilarProperties similarProperties={similarProperties} />
-                    <PropertyDetailBanner />
-                </main>
-                <WhatsapBanner />
-                <Footer />
-            </div >
+            <div className={`flex flex-col min-h-screen text-white`}>
+            <main className={`flex-grow property-search-gradient py-4`}>
+                <PropertyDetailHeader isDark={true} />
+                <PropertyDetailImages />
+                <PropertyPropertyDetail propertyFeatures={propertyFeatures} facilities={facilities} />
+                <PropertyDetailSimilarProperties similarProperties={similarProperties} />
+                <PropertyDetailBanner />
+            </main>
+            <WhatsapBanner />
+            <Footer />
+        </div >
         </>
     )
 }
