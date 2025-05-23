@@ -72,7 +72,7 @@ function PropertyDetailPage() {
         <>
             <Header />
             <div className={`flex flex-col min-h-screen text-white`}>
-            <main className={`flex-grow property-search-gradient py-4`}>
+            <main className={`flex-grow property-search-gradient`}>
                 <PropertyDetailHeader isDark={true} />
                 <PropertyDetailImages />
                 <PropertyPropertyDetail propertyFeatures={propertyFeatures} facilities={facilities} />

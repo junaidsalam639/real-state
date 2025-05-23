@@ -12,7 +12,7 @@ function WhatsapBanner() {
                                 <Image src="/assets/logo/logo.png" alt="Logo" width={100} height={100} />
                             </Link>
                         </div>
-                        <h3 className="text-2xl font-bold">GET FREE EXPERT ADVICE ON YOUR REALESTATE MATTERS!</h3>
+                        <h3 className="text-2xl font-bold text-white">GET FREE EXPERT ADVICE ON YOUR REALESTATE MATTERS!</h3>
                     </div>
                     <a
                         href="https://wa.me/919165079260"
