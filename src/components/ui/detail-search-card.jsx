@@ -34,7 +34,7 @@ function DetailSearchCard({ property }) {
                 <div className="p-4">
                     <div className="flex justify-between items-start mb-2">
                         <h3 className="text-lg font-bold text-black">{property.title}</h3>
-                        <p className="text-lg font-bold text-black">₹ {property.price} Cr.</p>
+                        <p className="text-lg font-bold text-black text-nowrap">₹ {property.price} Cr.</p>
                     </div>
                     <div className="flex justify-between items-start mb-2">
                         <div className="flex items-center text-black text-sm mb-3">

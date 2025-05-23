@@ -4,7 +4,7 @@ import Link from "next/link"
 function WhatsapBanner() {
     return (
         <>
-            <div className="bg-[url('/assets/images/bg-black.png')] py-4 border-t border-[#2a1f45]">
+            {/* <div className="bg-[url('/assets/images/bg-black.png')] py-4 border-t border-[#2a1f45]">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
                     <div className="flex items-center mb-4 md:mb-0">
                         <div className="mr-4">
@@ -32,9 +32,10 @@ function WhatsapBanner() {
                         RX100 WhatsApp
                     </a>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
 
 export default WhatsapBanner
+

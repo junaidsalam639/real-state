@@ -3,7 +3,7 @@ import Image from "next/image"
 function PropertyDetailBanner() {
     return (
         <>
-            <div className="relative h-[200px] overflow-hidden">
+            {/* <div className="relative h-[200px] overflow-hidden">
                 <Image
                     src="/assets/images/detail/banner.jpg"
                     alt="Banner Ad"
@@ -15,7 +15,7 @@ function PropertyDetailBanner() {
                         <h2 className="text-4xl font-bold text-white">Banner Ad</h2>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
