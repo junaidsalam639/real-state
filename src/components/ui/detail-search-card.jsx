@@ -41,7 +41,7 @@ function DetailSearchCard({ property }) {
                             <MapPin className="h-4 w-4 mr-1" />
                             <span className="text-black">{property.location}</span>
                         </div>
-                        <button className="cursor-pointer bg-black text-white text-xs px-4 py-2 rounded-full">CALL NOW</button>
+                        <button className="cursor-pointer bg-black text-white text-xs px-4 py-2 text-nowrap rounded-full">CALL NOW</button>
                     </div>
                     <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-4 text-sm">
